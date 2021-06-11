@@ -246,7 +246,7 @@ body {
         width: 300px;
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 500px) {
     .taskContainer {
         grid-template-columns: repeat(1, 1fr);
         margin-left: 15px;
@@ -297,5 +297,6 @@ body {
     .taskArea {
         width: 100%;
         height: 150px;
+        background-color: cadetblue;
     }
 }
