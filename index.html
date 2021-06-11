@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor-alert">
+        <div class="alerta" id="alerta">
+        </div>
+    </div>
+    <div class="full" id="full">
+        <div class="containerEdit" id="containerEdit">
+            <span class="cerrarIcon">&times</span>
+            <textarea name="tarea" id="taskArea" class="taskArea" cols="30" rows="10"></textarea>
+            <button class="btnGuardar" id="btnGuardar">Guardar</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="center">
+            <form id="form">
+
+                <input type="text" name="tarea" id="taskName" class="taskName" placeholder="Tarea">
+                <input type="submit" value="Agregar" class="btnsubmit" id="btnSubmit">
+            </form>
+        </div>
+    </div>
+
+    <div class="taskContainer" id="taskContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

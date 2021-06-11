@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-color: #1e1e1e;
+}
+.container {
+    height: 130px;
+    /* background-color: lightcoral; */
+    padding: 30px;
+}
+.center {
+    display: flex;
+    background-color: rgb(57, 51, 61);
+    height: 65px;
+    align-items: center;
+    border-radius: 5px;
+}
+.taskName {
+    margin-left: 20px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    color: rgb(119, 119, 119);
+    font-weight: bold;
+}
+.taskName:focus {
+    outline-width: 0;
+    color: rgb(19, 19, 19);
+}
+.btnsubmit {
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    margin-left: -5px;
+    height: 40px;
+    width: 80px;
+    color: whitesmoke;
+    background-color: darkslateblue;
+}
+.btnsubmit:hover {
+    background-color: rgb(99, 84, 194);
+}
+
+.taskContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    background-color: rgb(57, 51, 61);
+    margin: 30px;
+    margin-top: 0;
+    border-radius: 5px;
+    padding: 20px;
+}
+.divTarea {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    height: 200px;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.tarea {
+    /* background-color: whitesmoke; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    line-height: 25px;
+
+    width: 79%;
+    height: 80%;
+    padding: 5px;
+}
+.icon {
+    margin-right: 5px;
+}
+.btnDelete {
+    border: none;
+    color: white;
+    background-color: lightcoral;
+    padding: 7px 20px;
+    border-radius: 5px 0 0 5px;
+}
+.btnDelete:hover {
+    background-color: rgb(248, 179, 179);
+    cursor: pointer;
+}
+.btnEditar {
+    border: none;
+    background-color: rgb(138, 129, 196);
+    padding: 5px 20px;
+    padding-bottom: 7px;
+    border-radius: 0 5px 5px 0;
+    color: white;
+}
+.btnEditar:hover {
+    background-color: rgb(180, 172, 223);
+    cursor: pointer;
+}
+.full {
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    background-color: rgba(31, 21, 34, 0.568);
+    align-items: center;
+}
+.containerEdit {
+    height: 300px;
+    background-color: whitesmoke;
+    padding: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+.btnGuardar {
+    border: none;
+    color: white;
+    background-color: rgb(138, 129, 196);
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+.btnGuardar:hover {
+    cursor: pointer;
+    background-color: rgb(180, 172, 223);
+}
+.cerrarIcon {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-weight: bold;
+}
+.cerrarIcon:hover {
+    color: lightcoral;
+    cursor: pointer;
+}
+#taskArea {
+    border-radius: 5px;
+    border: 1px solid rgb(138, 129, 196);
+    padding: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contenedor-alert {
+    display: flex;
+    justify-content: center;
+}
+.alerta {
+    position: absolute;
+    height: 70px;
+    width: 30%;
+    border-radius: 0 0 15px 15px;
+    top: -70px;
+    transition: 500ms all ease-in-out;
+    color: whitesmoke;
+}
+
+.alerta-visible {
+    top: 0px;
+}
+
+.mensaje {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+.check {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: lightslategray;
+}
+
+.checkBox {
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    transform: scale(2);
+}
+
+@media screen and (max-width: 1300px) {
+    .btnEditar {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    .btnDelete {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    .h-6 {
+        width: 10px;
+    }
+    .check {
+        transform: scale(2);
+    }
+    .taskContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .divTarea {
+        font-size: 0.9rem;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .taskContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .h-6 {
+        width: 15px;
+    }
+    .btnDelete {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+        padding-top: 7px;
+    }
+    .check {
+        transform: scale(2.5);
+        top: 20px;
+        right: 20px;
+    }
+    .divTarea {
+        font-size: 1rem;
+        height: 200px;
+    }
+    .taskName {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .taskContainer {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .h-6 {
+        width: 9px;
+    }
+    .btnDelete {
+        border-radius: 5px 5px 0 0;
+    }
+    .btnEditar {
+        border-radius: 0 0 5px 5px;
+        padding-bottom: 6px;
+    }
+    .check {
+        transform: scale(2.5);
+        top: 5px;
+        right: 15px;
+    }
+    .divTarea {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: row;
+        font-size: 0.9rem;
+        height: 100px;
+        width: 100%;
+        overflow: scroll;
+    }
+    .taskName {
+        width: 180px;
+    }
+    .alerta {
+        height: 50px;
+    }
+    .mensaje {
+        font-size: 0.7rem;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+    }
+    .containerEdit {
+        width: 85%;
+        height: 250px;
+    }
+    .taskArea {
+        width: 100%;
+        height: 150px;
+    }
+}
