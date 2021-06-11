@@ -196,6 +196,18 @@ body {
     right: 16px;
     transform: scale(2);
 }
+.contSinTareas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    background-color: rgb(57, 51, 61);
+    margin: 30px;
+    margin-top: 0;
+    border-radius: 5px;
+    padding: 20px;
+    color: whitesmoke;
+}
 
 @media screen and (max-width: 1300px) {
     .btnEditar {
